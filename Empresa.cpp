@@ -23,6 +23,21 @@ void Empresa::setRubro(string prubro){
 
 void Empresa::addEmpleado(Empleado e){
     empleados.push_back(e);
+    if(empleados.size() + pasantes.size() >= 5){
+            cout << "Ingrese los ingresos anuales: ";
+            cin >> ingresos;
+            cout << "Ingrese los egresos anuales: ";
+            cin >> egresos;
+            cout << "Ingrese la cantidad de departamentos: ";
+            cin >> departamentos;
+            cout << "Ingrese el RTN: ";
+            cin >> rtn;
+            tipo = "Mediana";
+    }if(empleados.size() + pasantes.size() >= 15){
+        cout << "Ingrese el nombre del vicepresidente: ";
+        cin >> vice;
+        tipo = "Grande";
+    }
 }
 
 void Empresa::addPasante(Pasante p){
@@ -61,6 +76,10 @@ vector<Empleado> Empresa::getEmpleados(){
 
 vector<Pasante> Empresa::getPasantes(){
     return pasantes;
+}
+
+vector<string> Empresa::getProveedores(){
+    return proveedores;
 }
 
 Empresa::~Empresa(){

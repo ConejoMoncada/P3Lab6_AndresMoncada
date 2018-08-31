@@ -16,15 +16,30 @@ class Empresa{
         string rubro;
         string presidente;
         string permiso;
+        //mediana
+        float ingresos;
+        float egresos;
+        int departamentos;
+        string rtn;
+        //grande
+        string vice;
+        vector<string> proveedores;
         vector<Pasante> pasantes;
         vector<Empleado> empleados;
         vector<Persona> despedidos;
+
     public:
         Empresa(string,string,string,string,string);
         
         void setNombre(string);
         void setFecha(string);
         void setRubro(string);
+        void setIngresos(float);
+        void setEgresos(float);
+        void setDepartamentos(int);
+        void setrRtn(string);
+        void setVice(string);
+        void addProveedor(string);
 
         void addEmpleado(Empleado);
         void addPasante(Pasante);
@@ -35,6 +50,12 @@ class Empresa{
         string getFecha();
         string getRubro();
         string getPresidente();
+        float setIngresos();
+        float setEgresos();
+        int setDepartamentos();
+        string setrRtn();
+        string setVice();
+        vector<string> getProveedores();
 
         vector<Empleado> getEmpleados();
         vector<Pasante> getPasantes();
