@@ -25,6 +25,10 @@ double Empleado::getSalario(){
     return salario;
 }
 
+string Empleado::toString(){
+    return empId + " " + nombre + " " + sexo;
+}
+
 Empleado::~Empleado(){
 
 }

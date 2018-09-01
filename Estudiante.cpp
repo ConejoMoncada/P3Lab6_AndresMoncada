@@ -44,6 +44,11 @@ double Estudiante::getIndice(){
     return indice;
 }
 
+string Estudiante::toString(){
+    string out = cta + " " + nombre + " " + sexo + " " +carrera + " en " + univ + " " + to_string(indice);
+    return out;
+}
+
 Estudiante::~Estudiante(){
 
 }

@@ -25,6 +25,7 @@ class Persona{
         int getEdad();
         char getSexo();
         string getNacion();
+        virtual string toString();
 
         ~Persona();
 };

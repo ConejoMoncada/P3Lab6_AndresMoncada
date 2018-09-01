@@ -56,9 +56,11 @@ class Empresa{
         string setrRtn();
         string setVice();
         vector<string> getProveedores();
+        string toString();
 
         vector<Empleado> getEmpleados();
         vector<Pasante> getPasantes();
+        vector<Persona> getDespedidos();
 
         ~Empresa();
 };

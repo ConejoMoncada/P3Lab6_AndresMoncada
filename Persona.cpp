@@ -1,7 +1,7 @@
 #include "Persona.h"
 
 Persona::Persona(){
-    
+
 }
 Persona::Persona(string pnom, string pid, int pedad, char psexo, string pnacion){
     nombre = pnom;
@@ -49,6 +49,10 @@ char Persona::getSexo(){
 
 string Persona::getNacion(){
     return nacion;
+}
+
+string Persona::toString(){
+    return nombre;
 }
 
 Persona::~Persona(){

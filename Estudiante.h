@@ -20,6 +20,7 @@ class Estudiante: public Persona{
         string getUniv();
         string getCta();
         double getIndice();
+        string toString();
 
         ~Estudiante();
 };

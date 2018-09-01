@@ -24,6 +24,9 @@ string Pasante::getPasId(){
 int Pasante::getDur(){
     return dur;
 }
+string Pasante::toString(){
+    return pasId + " " + nombre + " " +sexo;
+}
 
 Pasante::~Pasante(){
 

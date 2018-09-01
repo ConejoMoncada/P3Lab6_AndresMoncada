@@ -14,6 +14,7 @@ class Pasante: public Persona{
 
         string getPasId();
         int getDur();
+        string toString();
 
         ~Pasante();
 };

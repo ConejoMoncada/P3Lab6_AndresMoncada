@@ -15,6 +15,7 @@ class Empleado: public Persona{
 
         string getEmpId();
         double getSalario();
+        string toString();
 
         ~Empleado();
 };

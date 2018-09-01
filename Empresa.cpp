@@ -42,6 +42,21 @@ void Empresa::addEmpleado(Empleado e){
 
 void Empresa::addPasante(Pasante p){
     pasantes.push_back(p);
+    if(empleados.size() + pasantes.size() >= 5){
+            cout << "Ingrese los ingresos anuales: ";
+            cin >> ingresos;
+            cout << "Ingrese los egresos anuales: ";
+            cin >> egresos;
+            cout << "Ingrese la cantidad de departamentos: ";
+            cin >> departamentos;
+            cout << "Ingrese el RTN: ";
+            cin >> rtn;
+            tipo = "Mediana";
+    }if(empleados.size() + pasantes.size() >= 15){
+        cout << "Ingrese el nombre del vicepresidente: ";
+        cin >> vice;
+        tipo = "Grande";
+    }
 }
 
 void Empresa::despedirEmp(int n){
@@ -80,6 +95,14 @@ vector<Pasante> Empresa::getPasantes(){
 
 vector<string> Empresa::getProveedores(){
     return proveedores;
+}
+
+vector<Persona> Empresa::getDespedidos(){
+    return despedidos;
+}
+
+string Empresa::toString(){
+    return nombre + " tamaño: " + tipo;
 }
 
 Empresa::~Empresa(){
